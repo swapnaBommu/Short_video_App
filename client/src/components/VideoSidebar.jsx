@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
-import './VideoSidebar.css';
-import Favorite from '@mui/icons-material/Favorite';
-import FavoriteBorder from '@mui/icons-material/FavoriteBorder';
-import Message from '@mui/icons-material/Message';
-import Share from '@mui/icons-material/Share';
+import React, { useState } from "react";
+import "./VideoSidebar.css";
+import Favorite from "@mui/icons-material/Favorite";
+import FavoriteBorder from "@mui/icons-material/FavoriteBorder";
+import Message from "@mui/icons-material/Message";
+import Share from "@mui/icons-material/Share";
 
-const VideoSidebar = ({likes,shares,messages}) => {
+const VideoSidebar = ({ likes, shares, messages }) => {
   const [liked, setLiked] = useState(false);
 
   return (
@@ -16,7 +16,7 @@ const VideoSidebar = ({likes,shares,messages}) => {
         ) : (
           <FavoriteBorder fontSize="large" onClick={() => setLiked(true)} />
         )}
-        <p>{liked ? likes + 1 : likes}</p>
+        <p>{liked ? +likes + 1 : likes}</p>
       </div>
 
       <div className="videoSidebar__button">
